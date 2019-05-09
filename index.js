@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image } from 'react-native';
+import { Image, Animated } from 'react-native';
 var gravatarApi = require('gravatar-api');
 
 class Gravatar extends Component {
@@ -10,7 +10,7 @@ class Gravatar extends Component {
     
 	render() {
 		return (
-          <Image style={[{width: 50, height:50}, this.props.style]}
+          <Animated.Image style={[{width: 50, height:50}, this.props.style]}
                 source={{uri:gravatarApi.imageUrl(this.props.options)}} />
 		);
 	}
